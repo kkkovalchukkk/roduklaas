@@ -1,0 +1,28 @@
+@mixin click() {
+  transition: $defaultShotTransitionTime;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+@mixin dash() {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1.7px;
+    background-color: $black;
+    max-width: 0%;
+    transition: $defaultShotTransitionTime;
+  }
+  &:hover::after {
+    max-width: 100%;
+  }
+}
