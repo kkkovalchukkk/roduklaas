@@ -71,7 +71,7 @@ body {
   &__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
   }
   &__swiper-left {
@@ -433,6 +433,16 @@ body {
     object-fit: cover;
     object-position: center;
   }
+  @media (max-width: 575px) {
+    &__heading {
+      max-width: 300px;
+    }
+    &__text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
 }
 
 .banner-section {
@@ -462,6 +472,11 @@ body {
 
   @media (max-width: 768px) {
     font-size: 26px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 .offers-section {
@@ -782,6 +797,15 @@ body {
       }
     }
   }
+
+  @media (max-width: 575px) {
+    &__wrapper {
+      padding: 0;
+    }
+    &__check-list {
+      padding: 0px 20px;
+    }
+  }
 }
 .advantages-section {
   margin-bottom: 120px;
@@ -904,15 +928,10 @@ body {
   }
 
   &__swiper-slide {
-    position: relative;
     border-radius: 32px;
     width: 100%;
     height: 560px;
     max-width: 841px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
     @media (max-width: 960px) {
       height: 460px;
     }
@@ -920,32 +939,39 @@ body {
       height: 240px;
     }
   }
-  &__slide-background {
+  &__swiper-slide-image-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      content: '';
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      left: -15px;
+      top: -15px;
+      background: rgba(255, 255, 255, 0.8);
+      filter: blur(5px);
+      z-index: -1;
+    }
+  }
+  &__swiper-slide-background-image {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba($color: $white, $alpha: 0.8);
-    backdrop-filter: blur(8px);
-    z-index: 2;
+    object-fit: cover;
+    z-index: -2;
   }
 
   &__img {
-    position: relative;
     width: auto;
     object-fit: contain;
     object-position: center;
-    z-index: 3;
-    &-background {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-    }
   }
 
   &__sw-navigation {
@@ -959,13 +985,17 @@ body {
 
   @media (max-width: 575px) {
     margin-bottom: 72px;
+    &__heading {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 }
 
 .sw-navigation {
   display: flex;
   align-items: center;
-  gap: 79px;
+  gap: 24px;
   &__left {
     width: 64px;
     height: 40px;

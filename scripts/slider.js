@@ -45,9 +45,11 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   gallerySwiper.on('click', (e) => {
-    window.addEventListener('click', closeSlideshowByClickOnOverlay);
-    slideShowEl.classList.add('active');
-    document.body.classList.add('no-scroll');
-    slideshowSwiper.slideTo(e.clickedIndex);
+    if (window.innerWidth <= 425) {
+      window.addEventListener('click', closeSlideshowByClickOnOverlay);
+      slideShowEl.classList.add('active');
+      document.body.classList.add('no-scroll');
+      slideshowSwiper.slideTo(e.clickedIndex);
+    }
   });
 });
