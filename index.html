@@ -713,24 +713,33 @@
           </div>
           <form action="" class="form contacts-section__form">
             <h5 class="form__heading">Заполните заявку и мы свяжемся с вами</h5>
+            <p class="form__finish-text">Заявка отправлена</p>
+            <p class="form__finish-subtext">
+              Мы свяжемся с вами в течение 24 часов в рабочие дни.
+            </p>
+            <button type="button" class="form__finish-btn">Новая заявка</button>
             <div class="form__row form__row--even">
               <label class="form__label">
                 Ваше имя
                 <input name="name" type="text" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
               <label class="form__label">
                 Адрес объекта
                 <input name="address" type="text" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
             </div>
             <div class="form__row form__row--even">
               <label class="form__label">
                 Телефон
                 <input name="tel" type="tel" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
               <label class="form__label">
                 Электронная почта
                 <input name="email" type="email" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
             </div>
             <div class="form__row form__row--col">
@@ -888,18 +897,22 @@
               <label class="form__label">
                 Высота K1
                 <input type="text" name="k1" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
               <label class="form__label">
                 Ширина L1
                 <input type="text" name="l1" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
               <label class="form__label">
                 Ширина L2
                 <input type="text" name="l2" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
               <label class="form__label">
                 Ширина L3
                 <input type="text" name="l3" class="form__input" />
+                <p class="form__error">Необходимо указать</p>
               </label>
             </div>
             <div class="form__row">
@@ -1053,6 +1066,8 @@
         },
       });
     </script>
+    <script src="https://unpkg.com/imask"></script>
     <script src="./scripts/location-menu.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>

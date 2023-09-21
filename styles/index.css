@@ -852,6 +852,15 @@ body {
 .form__label--textarea {
   width: 100%;
 }
+.form__error {
+  display: none;
+  color: #e73e52;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
 .form__input {
   width: 100%;
   padding: 8px 12px;
@@ -861,6 +870,13 @@ body {
   background: #fff;
   transition: 0.23s;
   outline: 1px solid transparent;
+}
+.form__input.error {
+  border: 1px solid #e73e52;
+}
+.form__input.error + .form__error {
+  margin-top: 6px;
+  display: initial;
 }
 .form__input:focus {
   outline: 1px solid #2a76c4;
@@ -1088,6 +1104,72 @@ body {
   height: 0.25px;
   bottom: -1px;
   background-color: #2a76c4;
+}
+.form--finish .form__row,
+.form--finish .form__files-list,
+.form--finish .form__submit-btn,
+.form--finish .form__bottom-text {
+  display: none;
+}
+.form--finish .form__heading {
+  margin-bottom: 0;
+}
+.form--finish .form__finish-subtext,
+.form--finish .form__finish-text,
+.form--finish .form__finish-btn {
+  display: initial;
+}
+.form__finish-subtext {
+  display: none;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.form__finish-text {
+  display: none;
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 32px;
+  background-image: url("../assets/svg/check-circle-outline-icon.svg");
+  color: #2a76c4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.form__finish-btn {
+  display: none;
+  transition: 0.23s;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #eef1f5;
+  color: #000000;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 16px;
+  transition: 0.23s;
+  outline: 2px solid transparent;
+}
+.form__finish-btn:hover {
+  transform: scale(1.05);
+}
+.form__finish-btn:active {
+  transform: translateY(2px);
+}
+.form__finish-btn:hover {
+  outline: 2px solid #eef1f5;
+  background-color: #f7f9fa;
 }
 
 .footer {

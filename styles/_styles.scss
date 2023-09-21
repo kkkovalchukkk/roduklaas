@@ -714,6 +714,15 @@ body {
       width: 100%;
     }
   }
+  &__error {
+    display: none;
+    color: $red;
+    font-family: $mainFont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
 
   &__input {
     width: 100%;
@@ -724,6 +733,13 @@ body {
     background: $white;
     transition: $defaultShotTransitionTime;
     outline: 1px solid transparent;
+    &.error {
+      border: 1px solid $red;
+    }
+    &.error + .form__error {
+      margin-top: 6px;
+      display: initial;
+    }
     &:focus {
       outline: 1px solid $blue;
     }
@@ -938,6 +954,69 @@ body {
       height: 0.25px;
       bottom: -1px;
       background-color: $blue;
+    }
+  }
+
+  &--finish {
+    .form__row,
+    .form__files-list,
+    .form__submit-btn,
+    .form__bottom-text {
+      display: none;
+    }
+    .form__heading {
+      margin-bottom: 0;
+    }
+    .form__finish-subtext,
+    .form__finish-text,
+    .form__finish-btn {
+      display: initial;
+    }
+  }
+
+  &__finish-subtext {
+    display: none;
+    color: $txt-primary;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &__finish-text {
+    display: none;
+    padding-left: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 32px;
+    background-image: url('../assets/svg/check-circle-outline-icon.svg');
+    color: $blue;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  &__finish-btn {
+    display: none;
+    @include click();
+    border-radius: 3px;
+    background: $nt-96;
+    color: $txt-primary;
+    text-align: center;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 8px 16px;
+    transition: $defaultShotTransitionTime;
+    outline: 2px solid transparent;
+    &:hover {
+      outline: 2px solid $nt-96;
+      background-color: $nt-98;
     }
   }
 }
