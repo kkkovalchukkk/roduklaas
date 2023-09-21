@@ -1068,9 +1068,9 @@
         </a>
       </div>
     </footer>
-    <!-- <div class="slideshow">
+    <div class="slideshow">
       <div class="slideshow__header">
-        <div class="slideshow__pagination">5/5</div>
+        <div class="slideshow__pagination"></div>
         <button class="slideshow__close-btn">
           <svg
             width="24"
@@ -1085,13 +1085,70 @@
             />
           </svg>
         </button>
-        <div class="swiper slideshow__swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide slideshow__swiper-slide"></div>
+      </div>
+      <div class="swiper slideshow__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slideshow__swiper-slide">
+            <img
+              src="./assets/img/gallery-img.png"
+              alt="
+                  ..."
+              class="slideshow__img"
+            />
+          </div>
+          <div class="swiper-slide slideshow__swiper-slide">
+            <img
+              src="./assets/img/gallery-img-middle.jpg"
+              alt="
+                  ..."
+              class="slideshow__img"
+            />
+          </div>
+          <div class="swiper-slide slideshow__swiper-slide">
+            <img
+              src="./assets/img/gallery-img-vertical.jpg"
+              alt="
+                  ..."
+              class="slideshow__img"
+            />
           </div>
         </div>
+        <button class="slideshow__swiper-left">
+          <?xml version="1.0" ?><svg
+            baseProfile="tiny"
+            height="24px"
+            id="Layer_1"
+            version="1.2"
+            viewBox="0 0 24 24"
+            width="24px"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              d="M18,11h-7.244l1.586-1.586c0.781-0.781,0.781-2.049,0-2.828c-0.781-0.781-2.047-0.781-2.828,0L3.1,13l6.414,6.414  C9.904,19.805,10.416,20,10.928,20s1.023-0.195,1.414-0.586c0.781-0.781,0.781-2.049,0-2.828L10.756,15H18c1.104,0,2-0.896,2-2  C20,11.895,19.104,11,18,11z"
+            />
+          </svg>
+        </button>
+        <button class="slideshow__swiper-right">
+          <?xml version="1.0" ?><svg
+            baseProfile="tiny"
+            height="24px"
+            id="Layer_1"
+            version="1.2"
+            viewBox="0 0 24 24"
+            width="24px"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              d="M10.586,6.586c-0.781,0.779-0.781,2.047,0,2.828L12.172,11H4.928c-1.104,0-2,0.895-2,2c0,1.104,0.896,2,2,2h7.244  l-1.586,1.586c-0.781,0.779-0.781,2.047,0,2.828C10.977,19.805,11.488,20,12,20s1.023-0.195,1.414-0.586L19.828,13l-6.414-6.414  C12.633,5.805,11.367,5.805,10.586,6.586z"
+            />
+          </svg>
+        </button>
       </div>
-    </div> -->
+    </div>
     <div class="burger-menu">
       <a href="#" class="burger-menu__logo-link">
         <div class="logo burger-menu__logo">
@@ -1222,23 +1279,8 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper('.gallery-section__swiper', {
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: {
-          el: '.gallery-section__swiper-pagination',
-          type: 'fraction',
-        },
-        navigation: {
-          nextEl: '.gallery-section__sw-navigation-right',
-          prevEl: '.gallery-section__sw-navigation-left',
-        },
-      });
-    </script>
     <script src="https://unpkg.com/imask"></script>
+    <script src="./scripts/slider.js"></script>
     <script src="./scripts/location-menu.js"></script>
     <script src="./scripts/validation.js"></script>
     <script src="./scripts/stick-header.js"></script>
